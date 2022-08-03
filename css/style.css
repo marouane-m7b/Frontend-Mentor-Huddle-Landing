@@ -1,0 +1,149 @@
+:root {
+  --font-family-1: "Open Sans", sans-serif;
+  --font-family-2: "Poppins", sans-serif;
+  --Violet: hsl(257, 40%, 49%);
+  --Soft-Magenta: hsl(300, 69%, 71%);
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+body {
+  font-size: 15px;
+  font-family: var(--font-family-2);
+}
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  grid-gap: 50px;
+  background-image: url(../images/bg-desktop.svg);
+  background-size: cover;
+  background-color: var(--Violet);
+}
+@media (max-width: 961px) {
+  .container {
+    flex-direction: column;
+    grid-gap: 50px;
+    height: auto;
+  }
+}
+@media (max-width: 375px) {
+  .container {
+    background-image: url(../images/bg-mobile.svg);
+  }
+}
+.side-1 {
+  width: 50%;
+  margin: 30px;
+}
+@media (max-width: 961px) {
+  .side-1 {
+    width: 80%;
+  }
+}
+.side-1 .img-1 {
+  width: 25%;
+  min-width: 150px;
+}
+.side-1 .img-2 {
+  width: 100%;
+  margin-top: 50px;
+}
+.side-2 {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-right: 50px;
+}
+@media (max-width: 961px) {
+  .side-2{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }
+}
+.side-2 h1 {
+  color: white;
+  font-size: 35px;
+  margin-right: 180px;
+  letter-spacing: 2px;
+  margin-bottom: 0;
+}
+@media (max-width: 961px) {
+  .side-2 h1 {
+    margin: 15px auto;
+  }
+}
+.side-2 p {
+  color: rgb(224, 224, 224);
+  font-family: var(--font-family-1);
+  margin-right: 50px;
+  line-height: 1.6;
+}
+@media (max-width: 961px) {
+  .side-2 p {
+    margin: 15px auto;
+  }
+}
+.side-2 .btn {
+  background-color: white;
+  color: var(--Violet);
+  padding: 15px 70px;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+  font-weight: 600;
+  box-shadow: 1px 3px 10px black;
+}
+@media (max-width: 961px) {
+  .side-2 .btn {
+    margin: 15px auto 50px;
+  }
+}
+.side-2 .btn:hover {
+  background-color: var(--Soft-Magenta);
+  color: white;
+  cursor: pointer;
+}
+.icons {
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+}
+@media (max-width: 961px) {
+  .icons {
+    position: relative;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+}
+.fa-brands {
+  color: white;
+  border: 1px solid white;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  padding: 10px;
+  margin: 5px;
+}
+.fa-brands:hover {
+  color: var(--Soft-Magenta);
+  cursor: pointer;
+  border-color: var(--Soft-Magenta);
+}
